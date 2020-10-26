@@ -7,7 +7,7 @@ name: AUTO_UPDATE_CCG_BIB
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '* * * * *' # Runs at 00:00 UTC on the 1st of every month
+    - cron:  '*/5 * * * *' # Runs at 00:00 UTC on the 1st of every month
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,23 +24,14 @@ jobs:
       # Checks out 
       - name: download ccg.bib
         run: wget https://cogcomp.seas.upenn.edu/bib/ccg.bib
-          
+      
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          token: ${{ secrets.PAT }}
-          commit-message: Update ccg.bib from the CCG website
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
           branch: auto_update_ccg_bib
-          delete-branch: true
-          title: '[Auto-Update] Updated ccg.bib from the CCG website'
-          body: |
-            Automatically downloading ccg.bib from the CCG website and update it here
-
-          assignees: schen149
-          reviewers: schen149
+          commit-message: [Auto-Commit] Updating ccg.bib from the CCG website
+          title: [Auto-PR] Updating ccg.bib from the CCG website
+          body: Updating ccg.bib to latest version
 
       - name: Check outputs
         run: |
