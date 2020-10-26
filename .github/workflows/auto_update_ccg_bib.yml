@@ -29,9 +29,9 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           branch: auto_update_ccg_bib
-          commit-message: [Auto-Commit] Updating ccg.bib from the CCG website
-          title: [Auto-PR] Updating ccg.bib from the CCG website
-          body: Updating ccg.bib to latest version
+          commit-message: '[Auto-Commit] Updating ccg.bib from the CCG website'
+          title: '[Auto-PR] Updating ccg.bib from the CCG website'
+          body: 'Updating ccg.bib to latest version'
 
       - name: Check outputs
         run: |
