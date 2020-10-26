@@ -7,7 +7,7 @@ name: AUTO_UPDATE_CCG_BIB
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '*/5 * * * *' # Runs at 00:00 UTC on the 1st of every month
+    - cron:  '0 0 1 * *' # Runs at 00:00 UTC on the 1st of every month
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
