@@ -1,4 +1,6 @@
 # ccg-bibfiles
+![.github/workflows/auto_update_ccg_bib.yml](https://github.com/schen149/ccg-bibfiles/workflows/.github/workflows/auto_update_ccg_bib.yml/badge.svg)
+
 Repository to store cogcomp's bib and cited bib files
 
 ## The full steps of maintaining up-to-date cited.bib and cited-recent.bib
