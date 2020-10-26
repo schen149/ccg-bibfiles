@@ -30,8 +30,8 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
           commit-message: Update ccg.bib from the CCG website
-          committer: 'sihaoc'
-          author: 'sihaoc@seas.upenn.edu'
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: auto_update_ccg_bib
           delete-branch: true
